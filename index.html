@@ -54,15 +54,16 @@
   }
 
   .header-btn {
-    background: var(--mango);
-    color: var(--noche);
+    background: linear-gradient(135deg, var(--mango), var(--atardecer));
+    color: white;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 13px;
-    padding: 9px 18px;
+    padding: 10px 20px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
+    box-shadow: 0 3px 12px rgba(212,98,26,0.3);
   }
 
   .hero {
@@ -100,7 +101,7 @@
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 100px;
     padding: 5px 12px;
-    font-size: 11px;
+    font-size: 13px;
     color: rgba(255,255,255,0.85);
     letter-spacing: 0.5px;
     margin-bottom: 20px;
@@ -125,7 +126,7 @@
   .hero-h1 em { font-style: italic; color: var(--mango); }
 
   .hero-body {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
     color: rgba(253,250,245,0.78);
     margin-bottom: 28px;
@@ -143,35 +144,44 @@
     z-index: 1;
   }
 
+  /* SOLARPUNK BUTTONS — organic pill, warm, living */
   .btn-primary {
-    background: var(--mango);
-    color: var(--noche);
+    background: linear-gradient(135deg, var(--mango) 0%, var(--atardecer) 100%);
+    color: white;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
-    padding: 16px 24px;
+    padding: 18px 28px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
     text-decoration: none;
     display: block;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(245,166,35,0.3);
+    box-shadow: 0 6px 24px rgba(212,98,26,0.35);
+    position: relative;
+    letter-spacing: -0.2px;
+  }
+
+  .btn-primary::before {
+    content: '🌱 ';
+    font-size: 14px;
   }
 
   .btn-outline {
     background: transparent;
-    color: rgba(255,255,255,0.8);
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 14px 24px;
-    border: 1.5px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: 2px dashed rgba(255,255,255,0.4);
     border-radius: 100px;
     cursor: pointer;
     text-decoration: none;
     display: block;
     text-align: center;
+    letter-spacing: 0.5px;
   }
 
   .hero-photo-zone {
@@ -199,7 +209,7 @@
 
   .section-tag {
     font-family: 'Caveat', cursive;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--atardecer);
     margin-bottom: 12px;
     display: block;
@@ -250,7 +260,7 @@
   }
 
   .valor-text p {
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(26,18,8,0.6);
     line-height: 1.6;
   }
@@ -290,7 +300,7 @@
 
   .planes-tag {
     font-family: 'Caveat', cursive;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--mango);
     display: block;
     margin-bottom: 8px;
@@ -352,89 +362,148 @@
   }
 
   .plan-pill-info p {
-    font-size: 11px;
+    font-size: 13px;
     color: rgba(253,250,245,0.55);
     line-height: 1.4;
   }
 
-  /* LOCAL STATS BLOCK */
-  .local-stats {
+  /* THE CLOCK */
+  .clock-section {
     background: var(--crema-calida);
-    padding: 32px 20px;
+    padding: 36px 20px;
     border-top: 1px solid rgba(26,18,8,0.08);
     border-bottom: 1px solid rgba(26,18,8,0.08);
   }
 
-  .stats-tag {
+  .clock-tag {
     font-family: 'Caveat', cursive;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--musgo);
     display: block;
     margin-bottom: 8px;
   }
 
-  .stats-h2 {
+  .clock-h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--noche);
     margin-bottom: 20px;
     letter-spacing: -0.5px;
+    line-height: 1.2;
   }
 
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .stat-card {
+  .clock-card {
     background: white;
-    border-radius: 12px;
-    padding: 16px 14px;
-    border: 1px solid rgba(26,18,8,0.06);
+    border-radius: 20px;
+    padding: 24px 20px;
+    border: 1px solid rgba(212,98,26,0.15);
+    text-align: center;
+    margin-bottom: 16px;
   }
 
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: var(--atardecer);
-    letter-spacing: -1px;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: rgba(26,18,8,0.5);
-    line-height: 1.4;
-  }
-
-  .operators-block {
-    margin-top: 16px;
-    background: white;
-    border-radius: 12px;
-    padding: 14px;
-    border: 1px solid rgba(26,18,8,0.06);
-  }
-
-  .operators-label {
+  .clock-since-label {
     font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     color: rgba(26,18,8,0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: block;
   }
 
-  .operators-list {
-    font-size: 12px;
+  .clock-year-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .clock-btn {
+    width: 36px; height: 36px;
+    background: var(--atardecer);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    flex-shrink: 0;
+  }
+
+  .clock-year-display {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--noche);
+    letter-spacing: -1px;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  .clock-total-paid {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 52px;
     color: var(--atardecer);
-    font-weight: 500;
-    line-height: 1.8;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .clock-total-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(26,18,8,0.5);
+    margin-bottom: 20px;
+  }
+
+  .clock-vs {
+    background: linear-gradient(135deg, var(--mango), var(--atardecer));
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .clock-vs-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .clock-vs-price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+    letter-spacing: -0.5px;
+  }
+
+  .clock-vs-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    display: block;
+    text-align: right;
+  }
+
+  .clock-note {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(26,18,8,0.5);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
   }
 
   .testimonios {
@@ -444,7 +513,7 @@
 
   .test-tag {
     font-family: 'Caveat', cursive;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--atardecer);
     display: block;
     margin-bottom: 8px;
@@ -487,14 +556,14 @@
   .test-content blockquote {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--noche);
     line-height: 1.6;
     margin-bottom: 6px;
   }
 
   .test-who {
-    font-size: 10px;
+    font-size: 12px;
     color: var(--atardecer);
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -511,7 +580,7 @@
 
   .cta-handwriting {
     font-family: 'Caveat', cursive;
-    font-size: 20px;
+    font-size: 22px;
     color: rgba(255,255,255,0.8);
     margin-bottom: 10px;
     position: relative;
@@ -533,7 +602,7 @@
   }
 
   .cta-body {
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(255,255,255,0.75);
     margin-bottom: 28px;
     line-height: 1.6;
@@ -547,7 +616,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 16px;
-    padding: 16px 32px;
+    padding: 18px 32px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -558,16 +627,19 @@
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
     position: relative;
     z-index: 1;
+    letter-spacing: -0.2px;
   }
+
+  .btn-cta-white::before { content: '🌱 '; font-size: 14px; }
 
   .btn-cta-ghost {
     background: transparent;
-    color: rgba(255,255,255,0.8);
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    padding: 13px 24px;
-    border: 1.5px solid rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 11px 24px;
+    border: 2px dashed rgba(255,255,255,0.4);
     border-radius: 100px;
     cursor: pointer;
     text-decoration: none;
@@ -627,7 +699,7 @@
   }
 
   .modal-subtitle {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--atardecer);
     font-weight: 500;
     margin-bottom: 24px;
@@ -678,7 +750,7 @@
     margin-bottom: 8px;
   }
 
-  .success-state p { font-size: 13px; color: rgba(26,18,8,0.5); line-height: 1.5; }
+  .success-state p { font-size: 15px; color: rgba(26,18,8,0.5); line-height: 1.5; }
 
   footer {
     background: var(--noche);
@@ -696,14 +768,14 @@
 
   .footer-soul {
     font-family: 'Caveat', cursive;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--mango);
     margin-bottom: 16px;
     display: block;
   }
 
   .footer-legal {
-    font-size: 9px;
+    font-size: 11px;
     color: rgba(255,255,255,0.2);
     line-height: 1.7;
   }
@@ -721,7 +793,7 @@
 </header>
 
 <section class="hero">
-  <div class="hero-tag" id="hero-tag">—</div>
+  <div class="hero-tag" id="hero-tag" style="flex-direction:column;align-items:flex-start;gap:2px;padding:8px 14px">—</div>
   <h1 class="hero-h1" id="hero-h1">—</h1>
   <p class="hero-body" id="hero-body">—</p>
   <div class="hero-cta-wrap">
@@ -729,7 +801,7 @@
     <a href="tel:+16203830333" class="btn-outline" id="hero-btn2">—</a>
   </div>
   <div class="hero-photo-zone">
-    <img src="https://source.unsplash.com/featured/800x600/?woman,phone,warm,sunset" alt="Libre">
+    <img src="https://picsum.photos/id/26/800/600" alt="Libre">
   </div>
 </section>
 
@@ -775,13 +847,13 @@
 
 <div class="photo-mosaic">
   <div class="mosaic-cell tall">
-    <img src="https://source.unsplash.com/featured/450x640/?woman,portrait,latin" alt="">
+    <img src="https://picsum.photos/id/1027/450/640" alt="">
   </div>
   <div class="mosaic-cell">
-    <img src="https://source.unsplash.com/featured/300x290/?family,latin,together" alt="">
+    <img src="https://picsum.photos/id/1024/300/290" alt="">
   </div>
   <div class="mosaic-cell">
-    <img src="https://source.unsplash.com/featured/300x220/?outdoor,sunlight,warm" alt="">
+    <img src="https://picsum.photos/id/15/300/220" alt="">
   </div>
 </div>
 
@@ -797,14 +869,27 @@
   </svg>
 </div>
 
-<!-- LOCAL STATS -->
-<section class="local-stats">
-  <span class="stats-tag" id="stats-tag">—</span>
-  <h2 class="stats-h2" id="stats-h2">—</h2>
-  <div class="stats-grid" id="stats-grid"></div>
-  <div class="operators-block">
-    <span class="operators-label" id="ops-label">—</span>
-    <div class="operators-list" id="ops-list">—</div>
+<!-- THE CLOCK -->
+<section class="clock-section">
+  <span class="clock-tag" id="clock-tag">—</span>
+  <h2 class="clock-h2" id="clock-h2">—</h2>
+  <div class="clock-card">
+    <span class="clock-since-label" id="clock-since-label">—</span>
+    <div class="clock-year-input">
+      <button class="clock-btn" onclick="adjustYear(-1)">−</button>
+      <div class="clock-year-display" id="clock-year">2018</div>
+      <button class="clock-btn" onclick="adjustYear(1)">+</button>
+    </div>
+    <div class="clock-total-paid" id="clock-total">—</div>
+    <div class="clock-total-label" id="clock-total-label">—</div>
+    <div class="clock-vs">
+      <div class="clock-vs-label" id="clock-vs-label">Libre</div>
+      <div>
+        <div class="clock-vs-price" id="clock-vs-price">—</div>
+        <span class="clock-vs-sub" id="clock-vs-sub">—</span>
+      </div>
+    </div>
+    <div class="clock-note" id="clock-note">—</div>
   </div>
 </section>
 
@@ -814,7 +899,7 @@
 
   <div class="testimonio-card">
     <div class="test-avatar">
-      <img src="https://source.unsplash.com/featured/112x112/?woman,latin,smile" alt="">
+      <img src="https://picsum.photos/id/1026/112/112" alt="">
     </div>
     <div class="test-content">
       <blockquote id="test1-quote">—</blockquote>
@@ -824,7 +909,7 @@
 
   <div class="testimonio-card">
     <div class="test-avatar">
-      <img src="https://source.unsplash.com/featured/112x112/?man,latin,friendly" alt="">
+      <img src="https://picsum.photos/id/1012/112/112" alt="">
     </div>
     <div class="test-content">
       <blockquote id="test2-quote">—</blockquote>
@@ -949,9 +1034,9 @@ const LOCALE_DATA = {
 const T = {
   es: {
     header_cta: 'Quiero mi número',
-    hero_tag: 'Sin SIM · Sin operadora · Sin mensualidad',
+    hero_tag: 'Sin SIM · Sin operadora\nSin mensualidad',
     hero_h1: 'Tu número.\n<em>Libre.</em>\nPara siempre.',
-    hero_body: 'Un número de teléfono real que nunca vence, nunca depende de una operadora, y siempre responde donde haya internet. Tuyo. Para siempre.',
+    hero_body: 'Tu número. En tu celular, tableta, smart TV, lentes Meta, coche conectado — cualquier cosa con micrófono, bocina e internet. Tuyo. Para siempre.',
     hero_btn1: 'Quiero mi número ahora',
     hero_btn2: '📞 Llámanos',
     val_tag: '¿Por qué Libre?',
@@ -996,9 +1081,9 @@ const T = {
   },
   pt: {
     header_cta: 'Quero meu número',
-    hero_tag: 'Sem SIM · Sem operadora · Sem mensalidade',
+    hero_tag: 'Sem SIM · Sem operadora\nSem mensalidade',
     hero_h1: 'O seu número.\n<em>Livre.</em>\nPara sempre.',
-    hero_body: 'Um número de telefone real que nunca expira, nunca depende de uma operadora e funciona onde houver internet. Seu. Para sempre.',
+    hero_body: 'Seu número. No celular, tablet, smart TV, óculos Meta, carro conectado — qualquer coisa com microfone, alto-falante e internet. Seu. Para sempre.',
     hero_btn1: 'Quero meu número agora',
     hero_btn2: '📞 Ligue para nós',
     val_tag: 'Por que Livre?',
@@ -1043,9 +1128,9 @@ const T = {
   },
   en: {
     header_cta: 'Get my number',
-    hero_tag: 'No SIM · No carrier · No monthly fee',
+    hero_tag: 'No SIM · No carrier\nNo monthly fee',
     hero_h1: 'Your number.\n<em>Free.</em>\nForever.',
-    hero_body: 'A real phone number that never expires, never depends on a carrier, and works wherever there\'s internet. Yours. Forever.',
+    hero_body: 'Your number. On your phone, tablet, smart TV, Meta glasses, connected car — anything with a mic, speaker and internet. Yours. Forever.',
     hero_btn1: 'Get my number now',
     hero_btn2: '📞 Call us',
     val_tag: 'Why Libre?',
@@ -1091,16 +1176,38 @@ const T = {
 };
 
 // ─── DETECT COUNTRY ──────────────────────────────────────────────────────────
-async function detectCountry() {
+function detectCountry() {
   try {
-    const r = await fetch('https://ipapi.co/json/');
-    const d = await r.json();
-    return d.country_code || 'DEFAULT';
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    const lang = (navigator.language || navigator.languages[0] || 'es').toLowerCase();
+    
+    const tzMap = {
+      'America/Mexico_City':'MX','America/Monterrey':'MX','America/Merida':'MX',
+      'America/Tijuana':'MX','America/Cancun':'MX','America/Chihuahua':'MX',
+      'America/Bogota':'CO','America/Lima':'PE','America/Santiago':'CL',
+      'America/Argentina/Buenos_Aires':'AR','America/Caracas':'VE',
+      'America/Sao_Paulo':'BR','America/Manaus':'BR','America/Belem':'BR',
+      'America/Fortaleza':'BR','America/Recife':'BR','America/Bahia':'BR',
+      'Europe/Lisbon':'PT','Atlantic/Azores':'PT',
+      'Europe/Madrid':'ES','Africa/Ceuta':'ES',
+      'America/New_York':'US','America/Chicago':'US','America/Denver':'US',
+      'America/Los_Angeles':'US','America/Phoenix':'US'
+    };
+    
+    if (tzMap[tz]) return Promise.resolve(tzMap[tz]);
+    
+    if (lang.startsWith('pt-br') || lang === 'pt') return Promise.resolve('BR');
+    if (lang.startsWith('pt')) return Promise.resolve('PT');
+    if (lang.startsWith('es-mx')) return Promise.resolve('MX');
+    if (lang.startsWith('es-co')) return Promise.resolve('CO');
+    if (lang.startsWith('es-ar')) return Promise.resolve('AR');
+    if (lang.startsWith('es-cl')) return Promise.resolve('CL');
+    if (lang.startsWith('es-pe')) return Promise.resolve('PE');
+    if (lang.startsWith('es')) return Promise.resolve('MX');
+    
+    return Promise.resolve('DEFAULT');
   } catch(e) {
-    const lang = navigator.language || 'en';
-    if (lang.startsWith('pt')) return 'BR';
-    if (lang.startsWith('es')) return 'MX';
-    return 'DEFAULT';
+    return Promise.resolve('DEFAULT');
   }
 }
 
@@ -1113,6 +1220,12 @@ function fmtPrice(symbol, amount, currency) {
 }
 
 // ─── RENDER PAGE ─────────────────────────────────────────────────────────────
+function s(id, val, html=false) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (html) el.innerHTML = val; else el.textContent = val;
+}
+
 function renderPage(country) {
   const loc = LOCALE_DATA[country] || LOCALE_DATA.DEFAULT;
   const t = T[loc.lang] || T.en;
@@ -1120,30 +1233,30 @@ function renderPage(country) {
   document.documentElement.lang = loc.lang;
 
   // Header
-  document.getElementById('header-cta').textContent = t.header_cta;
+  s('header-cta', t.header_cta);
 
   // Hero
-  document.getElementById('hero-tag').textContent = t.hero_tag;
-  document.getElementById('hero-h1').innerHTML = t.hero_h1.replace(/\n/g,'<br>');
-  document.getElementById('hero-body').textContent = t.hero_body;
-  document.getElementById('hero-btn1').textContent = t.hero_btn1;
-  document.getElementById('hero-btn2').textContent = t.hero_btn2 + ' +1 620 383 0333';
+  const htEl = document.getElementById('hero-tag'); if(htEl) htEl.innerHTML = t.hero_tag.replace(/\n/g, '<br>');
+  s('hero-h1', t.hero_h1.replace(/\n/g,'<br>'), true);
+  s('hero-body', t.hero_body);
+  s('hero-btn1', t.hero_btn1);
+  s('hero-btn2', t.hero_btn2 + ' +1 620 383 0333');
 
   // Valores
-  document.getElementById('val-tag').textContent = t.val_tag;
-  document.getElementById('val-h2').textContent = t.val_h2;
-  document.getElementById('v1-title').textContent = t.v1_title;
-  document.getElementById('v1-body').textContent = t.v1_body;
-  document.getElementById('v2-title').textContent = t.v2_title;
-  document.getElementById('v2-body').textContent = t.v2_body;
-  document.getElementById('v3-title').textContent = t.v3_title;
-  document.getElementById('v3-body').textContent = t.v3_body;
-  document.getElementById('v4-title').textContent = t.v4_title;
-  document.getElementById('v4-body').textContent = t.v4_body;
+  s('val-tag', t.val_tag);
+  s('val-h2', t.val_h2);
+  s('v1-title', t.v1_title);
+  s('v1-body', t.v1_body);
+  s('v2-title', t.v2_title);
+  s('v2-body', t.v2_body);
+  s('v3-title', t.v3_title);
+  s('v3-body', t.v3_body);
+  s('v4-title', t.v4_title);
+  s('v4-body', t.v4_body);
 
   // Plans
-  document.getElementById('plans-tag').textContent = t.plans_tag;
-  document.getElementById('plans-h2').innerHTML = t.plans_h2.replace(/\n/g,'<br>');
+  s('plans-tag', t.plans_tag);
+  s('plans-h2', t.plans_h2.replace(/\n/g,'<br>'), true);
 
   const planKeys = ['digital', 'home', 'family', 'familyplus'];
   const plansHTML = planKeys.map((k, i) => `
@@ -1158,54 +1271,55 @@ function renderPage(country) {
       </div>
     </div>
   `).join('');
-  document.getElementById('plans-container').innerHTML = plansHTML;
+  s('plans-container', plansHTML, true);
 
   // Stats
-  document.getElementById('stats-tag').textContent = loc.flag + ' ' + t.stats_tag;
-  document.getElementById('stats-h2').textContent = t.stats_h2;
+  s('stats-tag', loc.flag + ' ' + t.stats_tag);
+  s('stats-h2', t.stats_h2);
   const statsData = [loc.internet_users, loc.internet_pct, loc.mobile_users, loc.savings];
-  document.getElementById('stats-grid').innerHTML = statsData.map((v, i) => `
+  const sgEl = document.getElementById('stats-grid');
+  if (sgEl) sgEl.innerHTML = statsData.map((v, i) => `
     <div class="stat-card">
       <div class="stat-number">${v}</div>
       <div class="stat-label">${t.stat_labels[i]}</div>
     </div>
   `).join('');
-  document.getElementById('ops-label').textContent = t.ops_label;
-  document.getElementById('ops-list').textContent = loc.operators;
+  s('ops-label', t.ops_label);
+  s('ops-list', loc.operators);
 
   // Testimonials
-  document.getElementById('test-tag').textContent = t.test_tag;
-  document.getElementById('test-h2').textContent = t.test_h2;
-  document.getElementById('test1-quote').textContent = t.test1_quote;
-  document.getElementById('test1-who').textContent = t.test1_who;
-  document.getElementById('test2-quote').textContent = t.test2_quote;
-  document.getElementById('test2-who').textContent = t.test2_who;
+  s('test-tag', t.test_tag);
+  s('test-h2', t.test_h2);
+  s('test1-quote', t.test1_quote);
+  s('test1-who', t.test1_who);
+  s('test2-quote', t.test2_quote);
+  s('test2-who', t.test2_who);
 
   // CTA
-  document.getElementById('cta-hand').textContent = t.cta_hand;
-  document.getElementById('cta-h2').innerHTML = t.cta_h2.replace(/\n/g,'<br>');
-  document.getElementById('cta-body').textContent = t.cta_body;
-  document.getElementById('cta-btn1').textContent = t.cta_btn1;
-  document.getElementById('cta-btn2').textContent = t.cta_btn2 + ' +1 620 383 0333';
+  s('cta-hand', t.cta_hand);
+  s('cta-h2', t.cta_h2.replace(/\n/g,'<br>'), true);
+  s('cta-body', t.cta_body);
+  s('cta-btn1', t.cta_btn1);
+  s('cta-btn2', t.cta_btn2 + ' +1 620 383 0333');
 
   // Footer
-  document.getElementById('footer-soul').textContent = t.footer_soul;
-  document.getElementById('footer-legal').innerHTML = t.footer_legal;
+  s('footer-soul', t.footer_soul);
+  s('footer-legal', t.footer_legal, true);
 
   // Modal
-  document.getElementById('modal-title').textContent = t.modal_title;
-  document.getElementById('modal-subtitle').textContent = t.modal_subtitle;
-  document.getElementById('lbl-name').textContent = t.lbl_name;
-  document.getElementById('lbl-contact').textContent = t.lbl_contact;
-  document.getElementById('lbl-plan').textContent = t.lbl_plan;
-  document.getElementById('modal-btn').textContent = t.modal_btn;
-  document.getElementById('success-title').textContent = t.success_title;
-  document.getElementById('success-body').textContent = t.success_body;
+  s('modal-title', t.modal_title);
+  s('modal-subtitle', t.modal_subtitle);
+  s('lbl-name', t.lbl_name);
+  s('lbl-contact', t.lbl_contact);
+  s('lbl-plan', t.lbl_plan);
+  s('modal-btn', t.modal_btn);
+  s('success-title', t.success_title);
+  s('success-body', t.success_body);
 
   // Plan select
-  document.getElementById('plan-select').innerHTML = planKeys.map(k =>
+  s('plan-select', planKeys.map(k =>
     `<option value="${k}">${t.plan_names[k]} — ${fmtPrice(loc.symbol, loc.prices[k], loc.currency)} ${loc.currency}</option>`
-  ).join('');
+  ).join(''), true);
 }
 
 // ─── MODAL ───────────────────────────────────────────────────────────────────
@@ -1241,7 +1355,109 @@ function submitForm(e) {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
-detectCountry().then(renderPage);
+
+// ─── CLOCK LOGIC ─────────────────────────────────────────────────────────────
+let clockLoc = null;
+let clockYear = 2018;
+
+function adjustYear(delta) {
+  const current = new Date().getFullYear();
+  clockYear = Math.max(1995, Math.min(current - 1, clockYear + delta));
+  s('clock-year', clockYear);
+  updateClock();
+}
+
+function updateClock() {
+  if (!clockLoc) return;
+  const current = new Date().getFullYear();
+  const years = current - clockYear;
+  const sym = clockLoc.symbol;
+  const cur = clockLoc.currency;
+
+  const monthlyCarrier = {
+    MXN: 249, COP: 30000, ARS: 3500, CLP: 7990,
+    PEN: 39, BRL: 39, EUR: 14.99, GBP: 12.99,
+    USD: 19.99, CAD: 34.99, AUD: 29.99
+  };
+
+  const monthly = monthlyCarrier[cur] || 19.99;
+  const total = monthly * 12 * years;
+
+  const fmt = (n) => {
+    if (['MXN','COP','ARS','CLP'].includes(cur)) return sym + Math.round(n).toLocaleString();
+    return sym + n.toFixed(0);
+  };
+
+  s('clock-total', fmt(total));
+  s('clock-vs-price', fmt(clockLoc.prices.digital));
+}
+
+function setClockText(loc, t) {
+  clockLoc = loc;
+
+  const texts = {
+    es: {
+      tag: 'El tiempo que llevan cobrándote',
+      h2: '¿Desde cuándo tienes plan con una operadora?',
+      since_label: 'Empecé a pagar en',
+      total_label: 'Lo que le has dado a tu operadora',
+      vs_label: 'Libre — pago único',
+      vs_sub: 'una vez · gratis para siempre después',
+      note: 'Después de tu primer pago, tu número no le cuesta nada a nadie. Nunca más.'
+    },
+    pt: {
+      tag: 'O tempo que estão te cobrando',
+      h2: 'Desde quando você tem plano com uma operadora?',
+      since_label: 'Comecei a pagar em',
+      total_label: 'O que você deu à sua operadora',
+      vs_label: 'Livre — pagamento único',
+      vs_sub: 'uma vez · grátis para sempre depois',
+      note: 'Depois do primeiro pagamento, seu número não custa nada. Nunca mais.'
+    },
+    en: {
+      tag: 'How long they have been charging you',
+      h2: 'When did you get your first carrier plan?',
+      since_label: 'I started paying in',
+      total_label: 'What you have given your carrier',
+      vs_label: 'Libre — one payment',
+      vs_sub: 'once · free forever after',
+      note: 'After your first payment, your number costs nothing. Ever again.'
+    }
+  };
+
+  const cx = texts[loc.lang] || texts.en;
+  s('clock-tag', cx.tag);
+  s('clock-h2', cx.h2);
+  s('clock-since-label', cx.since_label);
+  s('clock-total-label', cx.total_label);
+  s('clock-vs-label', cx.vs_label);
+  s('clock-vs-sub', cx.vs_sub);
+  s('clock-note', cx.note);
+
+  const sym = loc.symbol;
+  const cur = loc.currency;
+  const fmt = (n) => ['MXN','COP','ARS','CLP'].includes(cur) ? sym + Math.round(n).toLocaleString() : sym + n.toFixed(0);
+  s('clock-vs-price', fmt(loc.prices.digital));
+
+  updateClock();
+}
+
+detectCountry().then(country => {
+  try {
+    renderPage(country);
+    const loc = LOCALE_DATA[country] || LOCALE_DATA.DEFAULT;
+    const t = T[loc.lang] || T.en;
+    setClockText(loc, t);
+  } catch(e) {
+    console.error('Render error:', e);
+    try {
+      renderPage('MX');
+      const loc = LOCALE_DATA['MX'];
+      const t = T['es'];
+      setClockText(loc, t);
+    } catch(e2) { console.error('Fallback error:', e2); }
+  }
+});
 </script>
 </body>
 </html>
